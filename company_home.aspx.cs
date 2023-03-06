@@ -22,7 +22,7 @@ public partial class company_home : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand("Insert into jobpost values('" + compid.Text + "','" + compname.Text + "','" + jobpost.Text + "')", con);
         cmd.ExecuteNonQuery();
         con.Close();
-        Page.RegisterStartupScript("UserMsg", "<script>alert('Successfully job posted...')</script>");
+        Page.RegisterStartupScript("UserCreatedMsg", "<script>alert('Successfully job posted...')</script>");
 
     }
     protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
